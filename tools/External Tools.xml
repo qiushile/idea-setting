@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="PasswordForDB" description="Change the password of database." showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="true" showConsoleOnStdErr="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="powershell" />
+      <option name="PARAMETERS" value="-Command &quot;(gc .\applicationContext.properties) -replace '&lt;db password&gt;', 'postgres' | Out-File .\applicationContext.properties -encoding utf8&quot;" />
+      <option name="WORKING_DIRECTORY" value="C:/Users/qiush/IdeaProjects/idm-service/idm-service/target/idm-service-1.24.0-SNAPSHOT/WEB-INF/spring" />
+    </exec>
+  </tool>
+</toolSet>
